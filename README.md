@@ -10,5 +10,5 @@ CHECK OUT THE PORTFOLIO BY CLICKING ON THE FOLLOWING LINK: [Portfolio link](http
 
 Here, the Preview Image of the portfolio:
 
-![preview img](/PreviewImages.png)
+![preview img](/previewofportfolio.png)
 
