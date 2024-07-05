@@ -44,6 +44,13 @@ function scrollActive() {
 }
 window.addEventListener('scroll', scrollActive);
 
+var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 30,
+    backSpeed: 30,
+    loop: true
+});
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
+  background-color: rgb(252, 252, 252);
   --header-height: 3rem;
   --font-semi: 600;
   /*===== Colors =====*/
@@ -188,6 +189,11 @@ img {
 }
 
 /*===== HOME =====*/
+
+.typed-text {
+  font-size: 2em; /* Adjust as needed */
+}
+
 .home {
   position: relative;
   row-gap: 5rem;
@@ -307,6 +313,7 @@ img {
 .skills__names {
   display: flex;
   align-items: center;
+  text-align: justify;
 }
 
 .skills__bar {
@@ -352,6 +359,19 @@ img {
 
 .work__img img {
   transition: 1s;
+}
+
+
+.works__data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-weight: var(--font-semi);
+  padding: .5rem 1rem;
+  margin-bottom: var(--mb-4);
+  border-radius: .5rem;
+  /* box-shadow: 0px 4px 25px rgb(0, 0, 0); */
 }
 
 .work__img img:hover {
@@ -502,25 +522,117 @@ img {
     padding-top: 2rem;
   }
   .about__img img {
-    width: 300px;
+    width: 400px;
   }
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
+    /* justify-content: space-between; */
     column-gap: 2rem;
+    row-gap: 20rem;
     align-items: center;
     text-align: initial;
   }
+  
   .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
+
+  .Exp__container {
+    background-color: #fff; /* Box background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    padding: 20px; /* Internal padding */
+    margin-bottom: 20px; /* Space between boxes */
+    width: 80%; /* Box width, adjust as necessary */
+    max-width: 600px; /* Max width of the box */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .Expe__container {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    max-width: 1200px; /* Adjust based on your layout needs */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
 
   .work__caption {
     text-align: center;
     color: #000; /* Black color */
     font-weight: bold;
   }
-  
+
+  .contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-left-title h2{
+    font-weight: 600;
+    color: var(--first-color);
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  .contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: rgba(30, 30, 184, 0.736);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+  }
+
+  .contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+
+  }
+
+  .contact-inputs:focus{
+    border: 2px solid black;
+  }
+
+  .contact-inputs::placeholder{
+    color: grey;
+  }
+
+  .contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: black;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,white,grey);
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -533,6 +645,39 @@ img {
   }
   .home__img {
     width: 450px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-container {
+      padding: 20px; /* Add some padding around the container */
+  }
+
+  .contact-left {
+      width: 100%; /* Make the form take full width */
+      max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  }
+
+  .contact-inputs, .contact-left button {
+      width: calc(100% - 20px); /* Adjust width to account for padding */
+      margin: 10px 0; /* Add some vertical margin for spacing */
+      font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .contact-left-title h2 {
+      font-size: 24px; /* Larger title font size */
+  }
+
+  .contact-left button {
+      display: flex; /* To align the text and image inside the button */
+      justify-content: center; /* Center the content */
+      align-items: center; /* Align items vertically */
+  }
+
+  .contact-left button img {
+      width: 16px; /* Adjust the arrow image size if necessary */
+      margin-left: 8px; /* Add some space between the text and the image */
   }
 }
 
