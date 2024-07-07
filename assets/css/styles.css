@@ -596,6 +596,7 @@ img {
   }
 
   .contact-inputs{
+    background-color: #DCDCDC;
     width: 400px;
     height: 50px;
     border: none;
