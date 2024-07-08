@@ -51,6 +51,14 @@ var typed = new Typed('#typed', {
     loop: true
 });
 
+
+var typed = new Typed('#type', {
+    stringsElement: '#typed-string',
+    typeSpeed: 30,
+    backSpeed: 30,
+    loop: true
+});
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',

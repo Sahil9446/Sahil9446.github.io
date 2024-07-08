@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(255, 255, 255);
   --header-height: 3rem;
   --font-semi: 600;
   /*===== Colors =====*/
@@ -413,6 +413,16 @@ img {
   margin-bottom: var(--mb-4);
 }
 
+.footer__Address {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: var(--mb-4);
+}
+
+.footer__Address a {
+  color: #cccccc;
+}
+
 .footer__social {
   margin-bottom: var(--mb-4);
 }
@@ -602,8 +612,8 @@ img {
     border: none;
     outline: none;
     padding-left: 25px;
-    font-weight: 500;
-    color: black;
+    font-weight: 100;
+    color: black  ;
     border-radius: 50px;
   }
 
@@ -633,6 +643,11 @@ img {
     border-radius: 50px;
     background: linear-gradient(270deg,white,grey);
     cursor: pointer;
+  }
+
+  .Contact__title {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-5);
   }
 }
 
