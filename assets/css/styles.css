@@ -567,7 +567,15 @@ img {
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add some padding for spacing */
   }
-  
+
+  .project-placeholder {
+    text-align: center;
+    padding: 20px;
+}
+
+.project-placeholder h1 {
+    margin-bottom: 10px;
+}
 
   .work__caption {
     text-align: center;
