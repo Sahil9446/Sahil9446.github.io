@@ -38,6 +38,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work Experience</a></li>
+                        <li class="nav__item"><a href="#Blogs" class="nav__link">Articles</a></li>
                         <li class="nav__item"><a href="#Projects" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#Contact" class="nav__link">Contact</a></li>
                     </ul>
@@ -304,6 +305,71 @@
                 </div>
             </section>
 
+            <!-- ARTICLES -->
+            <section class="Blogs section" id="Blogs">
+                <h2 class="section-title">Articles</h2>
+                <!-- <a href="https://medium.com/@sa_hilll94" target="_blank"><h4 style="text-align: center;">Click on it to get more articles on my medium profile.</h4></a> -->
+                <div id="blog-container">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                    const blogContainer = document.getElementById('blog-container');
+                    const loadMoreButton = document.getElementById('load-more');
+                      const batchSize = 5; // Number of articles to load per batch
+                      let currentIndex = 0; // Index to keep track of loaded articles
+                      let articles = []; // Array to store all fetched articles                  
+                    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sa_hilll94')
+                        .then(response => response.json())
+                        .then(data => {
+                        articles = data.items;
+                        console.log(data.items);
+                        loadArticles();
+                        })
+                        .catch(error => console.error('Error fetching Medium articles:', error));
+                
+                    function loadArticles() {
+                        let html = '';
+                        const end = currentIndex + batchSize;
+                        const itemsToLoad = articles.slice(currentIndex, end);
+                
+                        itemsToLoad.forEach(item => {
+                        const title = item.title;
+                        const link = item.link;
+                        const pubDate = new Date(item.pubDate).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
+                        });
+                        const description = item.description;
+                        const trimmedDescription = description.length > 200 ? description.substring(0, 200) + '...' : description;
+                        const image = item.thumbnail;
+                
+                        html += `
+                            <div class="blog-post">
+                            ${image ? `<img src="${image}" alt="${title}">` : ''}
+                            <h3>${title}</h3>
+                            <p>${trimmedDescription}</p>
+                            <a href="${link}" target="_blank">Read More</a>
+                            <p class="pub-date">Published on ${pubDate}</p>
+                            </div>
+                        `;
+                        });
+                
+                        blogContainer.innerHTML += html;
+                        currentIndex += batchSize;
+                
+                        if (currentIndex >= articles.length) {
+                          loadMoreButton.style.display = 'none'; // Hide button when all articles are loaded
+                        }
+                    }
+                
+                    loadMoreButton.addEventListener('click', loadArticles);
+                    });
+                </script>   
+                </div>
+                <a href="https://medium.com/@sa_hilll94" target="_blank"><h3 id="blogss" style="text-align: center;">Click Here to Explore More Articles</h3></a>
+                <!-- <button id="load-more">Load More</button> -->
+                </section>
+
             <!--===== PROJECT SECTION =====-->
 <!--             <section class="project section" id="Projects">
                 <h2 class="section-title">Projects</h2>
@@ -341,7 +407,8 @@
                     </a> -->
 <!--                 </div>
             </section> -->
-                        
+            
+            <!--===== PROJECT SECTION =====-->
             <section class="project section" id="Projects">
                 <div class="container">
                     <h2 class="section-title">Projects</h2>
