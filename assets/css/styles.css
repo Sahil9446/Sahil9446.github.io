@@ -697,7 +697,7 @@ img {
   margin: 1em;
   padding: 1em;
   flex: 1 1 30%;
-  max-width: 30%;
+  max-width: 300px;
   width: 300px;
   box-shadow: 0 4px 8px lightgrey;
   transition: transform 0.3s;
