@@ -114,7 +114,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  box-shadow: 0 1px 4px rgb(255, 255, 255);
 }
 
 /*===== NAV =====*/
@@ -251,12 +251,12 @@ img {
   color: #fff;
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
-  border-radius: .5rem;
+  border-radius: 2.5rem;
   transition: .3s;
 }
 
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 10px 36px rgba(255, 0, 0, 0.15);
 }
 
 /* ===== ABOUT =====*/
@@ -268,6 +268,7 @@ img {
 .about__subtitle {
   margin-bottom: var(--mb-2);
 }
+
 
 .about__img {
   justify-self: center;
@@ -352,7 +353,7 @@ img {
 }
 
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0px 4px 25px rgb(36, 80, 255);
   border-radius: .5rem;
   overflow: hidden;
 }
@@ -550,7 +551,7 @@ img {
 
   .Exp__container {
     background-color: #fff; /* Box background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    box-shadow: 0 4px 8px rgb(18, 107, 240); /* Box shadow */
     padding: 20px; /* Internal padding */
     margin-bottom: 20px; /* Space between boxes */
     width: 80%; /* Box width, adjust as necessary */
@@ -581,6 +582,12 @@ img {
     text-align: center;
     color: #000; /* Black color */
     font-weight: bold;
+  }
+
+  .below__caption {
+    text-align: center;
+    color: black; /* Black color */
+    font-weight: lighter;
   }
 
   .contact-container{
@@ -693,13 +700,13 @@ img {
 
 .blog-post {
   background: white;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 1em;
   padding: 1em;
   flex: 1 1 30%;
   max-width: 300px;
   width: 300px;
-  box-shadow: 0 4px 8px lightgrey;
+  box-shadow: 0 4px 8px rgb(18, 103, 230);
   transition: transform 0.3s;
 }
 
@@ -737,12 +744,13 @@ img {
 
 @media (max-width: 768px) {
   .contact-container {
-      padding: 20px; /* Add some padding around the container */
+      padding: 20px; /* Adjust padding for better fit on smaller screens */
   }
 
   .contact-left {
       width: 100%; /* Make the form take full width */
       max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+      padding: 10px; /* Add padding for better spacing */
   }
 
   .contact-inputs, .contact-left button {
@@ -751,19 +759,42 @@ img {
       font-size: 16px; /* Adjust font size for better readability */
   }
 
+  .contact-inputs input, .contact-inputs textarea {
+      width: 100%; /* Make sure input fields take full width */
+      padding: 12px; /* Add padding for better touch experience */
+      box-sizing: border-box; /* Include padding in width calculation */
+      border: 1px solid #ccc; /* Add border for better visibility */
+      border-radius: 40px; /* Rounded corners for input fields */
+      font-size: 16px; /* Adjust font size for input fields */
+  }
+
   .contact-left-title h2 {
-      font-size: 24px; /* Larger title font size */
+      font-size: 22px; /* Adjust title font size for better readability */
+      margin-bottom: 20px; /* Add margin for better spacing */
   }
 
   .contact-left button {
       display: flex; /* To align the text and image inside the button */
       justify-content: center; /* Center the content */
       align-items: center; /* Align items vertically */
+      padding: 12px; /* Add padding for better touch experience */
+      font-size: 18px; /* Increase font size for better readability */
+      background-color: grey; /* Button background color */
+      color: #fff; /* Button text color */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners for button */
+      cursor: pointer; /* Change cursor to pointer */
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+
+  .contact-left button:hover {
+      background-color: #0056b3; /* Darker background color on hover */
   }
 
   .contact-left button img {
-      width: 16px; /* Adjust the arrow image size if necessary */
-      margin-left: 8px; /* Add some space between the text and the image */
+      width: 20px; /* Adjust the arrow image size if necessary */
+      margin-left: 10px; /* Add some space between the text and the image */
   }
 }
+
 
