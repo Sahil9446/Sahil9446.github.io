@@ -101,7 +101,7 @@ img {
 
 /*===== LAYOUT =====*/
 .bd-grid {
-  max-width: 1024px;
+  max-width: 1450px;
   display: grid;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
@@ -582,12 +582,19 @@ img {
     text-align: center;
     color: #000; /* Black color */
     font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .Links{
+    text-align: center;
   }
 
   .below__caption {
     text-align: center;
     color: black; /* Black color */
     font-weight: lighter;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .contact-container{
@@ -797,4 +804,81 @@ img {
   }
 }
 
+
+@media (max-width: 768px){
+  .bd-grid {
+    max-width: 1450px;
+    display: grid;
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+  }
+
+  .work__caption {
+    text-align: center;
+    color: #000; /* Black color */
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .below__caption {
+    text-align: center;
+    color: black; /* Black color */
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .Links{
+    text-align: center;
+  }
+
+}
+
+
+
+@media (max-width: 768px){
+  .contact-inputs{
+    background-color: #DCDCDC;
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 100;
+    color: black  ;
+    border-radius: 50px;
+  }
+
+}
+
+
+@media (max-width: 768px){
+  .works__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-semi);
+    padding: .5rem 1rem;
+    margin-bottom: var(--mb-4);
+    border-radius: .5rem;
+    /* box-shadow: 0px 4px 25px rgb(0, 0, 0); */
+  }
+  
+  .skills__names {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .Exp__container {
+    background-color: #fff; /* Box background color */
+    box-shadow: 0 4px 8px rgb(18, 107, 240); /* Box shadow */
+    padding: 20px; /* Internal padding */
+    margin-bottom: 20px; /* Space between boxes */
+    width: 80%; /* Box width, adjust as necessary */
+    max-width: 600px; /* Max width of the box */
+    border-radius: 10px; /* Rounded corners */
+  }
+}
 
