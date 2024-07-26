@@ -806,13 +806,6 @@ img {
 
 
 @media (max-width: 768px){
-  .bd-grid {
-    max-width: 1450px;
-    display: grid;
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
-  }
-
   .work__caption {
     text-align: center;
     color: #000; /* Black color */
