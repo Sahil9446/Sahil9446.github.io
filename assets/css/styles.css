@@ -379,6 +379,68 @@ img {
   transform: scale(1.1);
 }
 
+/* CODING PROFILE SECTION STYLES */
+.coding-profile-section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.coding-profile-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Profile Container */
+.coding-profile-container {
+  margin-bottom: 30px; /* Add space between profiles */
+}
+
+/* Profile Image */
+.coding-profile-img {
+  max-width: 500px; /* Increase the max width */
+  width: 100%;  /* Ensure images are responsive but have a larger max width */
+  height: auto;
+}
+
+/* Container for works data */
+.coding-profile-container__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;  /* Space between images */
+  text-align: center;
+}
+
+.coding-profile-container__grid {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Optional Responsive Styling */
+@media (max-width: 768px) {
+  .coding-profile-img {
+      width: 100%;  /* Make images responsive on smaller screens */
+  }
+}
+
+.coding-profile-link {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #040c14; /* Link color */
+  text-decoration: none;
+}
+
+.coding-profile-link:hover {
+  text-decoration: underline;
+}
+
+
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
