@@ -380,15 +380,15 @@ img {
 }
 
 /* =====Coding Profiles===== */
-.profile-link {
-    text-decoration: none;
-    color: #0073e6;
-    font-weight: bold;
+.coding-profile-link {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #1e90ff; /* Link color */
+  text-decoration: none;
 }
 
-.profile-link:hover {
-    text-decoration: underline;
-    color: #005bb5; /* Darker shade for hover effect */
+.coding-profile-link:hover {
+  text-decoration: underline;
 }
 
 
