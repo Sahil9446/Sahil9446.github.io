@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(24,26,27);
   --header-height: 3rem;
   --font-semi: 600;
   /*===== Colors =====*/
@@ -10,9 +10,12 @@
   /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /* --second-color: hsl(var(--hue-color), 56%, 12%); */
+  --second-color: hsl(0, 0%, 100%);
+  
+
   /*===== Font and Typegraphy =====*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -113,8 +116,8 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgb(255, 255, 255);
+  background-color: #181A1B;
+  box-shadow: 0 1px 4px rgb(24, 26, 27);
 }
 
 /*===== NAV =====*/
@@ -134,7 +137,7 @@ img {
     width: 90%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: hsl(var(--hue-color), 56%, 12%);
     transition: .5s;
   }
 }
@@ -145,7 +148,7 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
+  color: #ffffff;
 }
 
 .nav__link:hover {
@@ -302,7 +305,7 @@ img {
   padding: .5rem 1rem;
   margin-bottom: var(--mb-4);
   border-radius: .5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0px 4px 25px rgba(194, 194, 194, 0.15);
 }
 
 .skills__icon {
@@ -357,6 +360,7 @@ img {
   border-radius: .5rem;
   overflow: hidden;
 }
+
 
 .work__img img {
   transition: 1s;
@@ -415,7 +419,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color:  hsl(var(--hue-color), 56%, 12%);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
@@ -563,7 +567,7 @@ img {
   }
 
   .Exp__container {
-    background-color: #fff; /* Box background color */
+    background-color: #000000; /* Box background color */
     box-shadow: 0 4px 8px rgb(18, 107, 240); /* Box shadow */
     padding: 20px; /* Internal padding */
     margin-bottom: 20px; /* Space between boxes */
@@ -593,9 +597,10 @@ img {
 
   .work__caption {
     text-align: center;
-    color: #000; /* Black color */
+    color: #ffffff; /* Black color */
     font-weight: bold;
     margin-top: 10px;
+    font:poppins;
   }
   
   .Links{
@@ -604,10 +609,11 @@ img {
 
   .below__caption {
     text-align: center;
-    color: black; /* Black color */
+    color: rgb(255, 255, 255); /* Black color */
     font-weight: lighter;
     margin-bottom: 20px;
     margin-top: 20px;
+    font:robotto;
   }
 
   .contact-container{
@@ -641,14 +647,14 @@ img {
   }
 
   .contact-inputs{
-    background-color: #DCDCDC;
+    background-color: #000000;
     width: 400px;
     height: 50px;
     border: none;
     outline: none;
     padding-left: 25px;
     font-weight: 100;
-    color: black  ;
+    color: rgb(255, 255, 255)  ;
     border-radius: 50px;
   }
 
@@ -676,8 +682,8 @@ img {
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(270deg,white,grey);
-    cursor: pointer;
+    background: linear-gradient(270deg,white,rgb(0, 0, 0));
+    cursor: pointer;  
   }
 
   .Contact__title {
@@ -702,8 +708,8 @@ img {
 
 #blogss {
   /* padding: 2em 0; */
-  background-color:white;
-  color: black;
+  background-color:rgb(24, 26, 27);
+  color: rgb(255, 255, 255);
 }
 
 #blogss h2 {
@@ -719,7 +725,7 @@ img {
 }
 
 .blog-post {
-  background: white;
+  background: rgb(0, 0, 0);
   border-radius: 15px;
   margin: 1em;
   padding: 1em;
@@ -821,14 +827,14 @@ img {
 @media (max-width: 768px){
   .work__caption {
     text-align: center;
-    color: #000; /* Black color */
+    color: #ffffff; /* Black color */
     font-weight: bold;
     margin-top: 10px;
   }
 
   .below__caption {
     text-align: center;
-    color: black; /* Black color */
+    color: rgb(255, 255, 255); /* Black color */
     font-weight: lighter;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -844,14 +850,14 @@ img {
 
 @media (max-width: 768px){
   .contact-inputs{
-    background-color: #DCDCDC;
+    background-color: #000000;
     width: 300px;
     height: 50px;
     border: none;
     outline: none;
     padding-left: 25px;
     font-weight: 100;
-    color: black  ;
+    color: rgb(255, 255, 255)  ;
     border-radius: 50px;
   }
 
@@ -878,7 +884,7 @@ img {
   }
 
   .Exp__container {
-    background-color: #fff; /* Box background color */
+    background-color: #000000; /* Box background color */
     box-shadow: 0 4px 8px rgb(18, 107, 240); /* Box shadow */
     padding: 20px; /* Internal padding */
     margin-bottom: 20px; /* Space between boxes */
