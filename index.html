@@ -595,7 +595,6 @@
         <!-- CONTACT SECTION -->
         <section class="project section" id="Contact">
             <div class="contact-container">
-                <input type="hidden" name="redirect" value="https://sahilportfolio.me/ThankYou.html">
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
                     <div class="contact-left-title">
                         <h2>Contact</h2>
@@ -608,20 +607,44 @@
                         </div>
                         <span id="type"></span>
                     </h1>
+                    <!-- Hidden Access Key -->
                     <input type="hidden" name="access_key" value="ddea4dc1-d702-466f-9f78-11f4bd0d7019">
-                    <input background type="text" name="name" placeholder="YOUR FULL NAME" class="contact-inputs"
+
+                    <!-- User Input Fields -->
+                    <input type="text" id="name" name="name" placeholder="YOUR FULL NAME" class="contact-inputs"
                         required>
                     <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS" class="contact-inputs" required>
+
+                    <!-- Dynamic Subject Line -->
+                    <input type="hidden" id="dynamic-subject" name="subject" value="">
                     <input type="text" name="subject" placeholder="SUBJECT OF YOUR MESSAGE" class="contact-inputs"
                         required>
+
                     <textarea name="message" placeholder="YOUR MESSAGE" class="contact-inputs"></textarea>
+
+
+                    <!-- Submit Button -->
                     <button type="submit">Submit<img src="assets/img/Arrow.svg" alt=""></button>
+
+
+                    <!-- Redirect -->
                     <input type="hidden" name="redirect" value="https://sahilportfolio.me/ThankYou.html">
                 </form>
-                </input>
-                <div></div>
             </div>
         </section>
+
+        <script>
+            // Add event listener to update the hidden subject field dynamically
+            document.getElementById("name").addEventListener("input", function () {
+                const name = this.value.trim(); // Get the name input value
+                const subjectField = document.getElementById("dynamic-subject");
+                if (name) {
+                    subjectField.value = `${name} sent a message from SAHILPORTFOLIO`;
+                } else {
+                    subjectField.value = ""; // Reset if no name is entered
+                }
+            });
+        </script>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
