@@ -47,13 +47,20 @@
         .back-link:hover {
             background-color: #232823;
         }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            body {
+                height: 60vh;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="thank-you-container">
         <h1>Thank You!</h1>
-        <p>Your message has been received. I appreciate you taking the time to reach out.</p>
-        <p>I’ll get back to you as soon as possible!</p>
+        <p style="text-align: justify;">Your message has been received. I appreciate you taking the time to reach out.</p>
+        <p style="text-align: center;">I’ll get back to you as soon as possible!</p>
         <a href="https://sahilportfolio.me" class="back-link">Back to My Portfolio</a>
     </div>
 </body>
