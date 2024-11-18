@@ -47,9 +47,29 @@
   box-sizing: border-box;
 }
 
-html {
+/* Apply to the root and body to ensure full coverage */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* Ensure smooth vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   scroll-behavior: smooth;
 }
+
+/* Hide the scrollbar */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+}
+
+html {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+body {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
+}
+
+
 
 body {
   margin: var(--header-height) 0 0 0;
