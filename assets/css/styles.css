@@ -710,10 +710,10 @@ img {
   }
 
   .below__caption {
-    text-align: center;
+    text-align: justify;
     color: rgb(255, 255, 255);
     /* Black color */
-    font-weight: lighter;
+    font-weight: bolder;
     margin-bottom: 20px;
     margin-top: 20px;
     font: robotto;
@@ -835,7 +835,7 @@ img {
   margin: 1em;
   padding: 1em;
   flex: 1 1 30%;
-  max-width: 300px;
+  max-width: 400px;
   width: 300px;
   box-shadow: 0 4px 8px rgb(18, 103, 230);
   transition: transform 0.3s;
@@ -973,7 +973,7 @@ img {
     text-align: center;
     color: rgb(255, 255, 255);
     /* Black color */
-    font-weight: lighter;
+    font-weight: bolder;
     margin-bottom: 20px;
     margin-top: 20px;
   }
