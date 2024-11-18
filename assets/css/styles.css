@@ -48,25 +48,32 @@
 }
 
 /* Apply to the root and body to ensure full coverage */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  overflow-y: scroll; /* Ensure smooth vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: scroll;
+  /* Ensure smooth vertical scrolling */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
   scroll-behavior: smooth;
 }
 
 /* Hide the scrollbar */
-html::-webkit-scrollbar, body::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
 }
 
 html {
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for Firefox */
 }
 
 body {
-  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
+  -ms-overflow-style: none;
+  /* Hide scrollbar for Internet Explorer */
 }
 
 
@@ -154,13 +161,46 @@ img {
   font-weight: var(--font-semi);
 }
 
+/* Set the header to be transparent */
+.l-header {
+  position: fixed;
+  /* Fixes the header at the top */
+  width: 100%;
+  /* Ensures it spans the full width */
+  background-color: rgba(24, 26, 27, 0.8);
+  /* Semi-transparent black background */
+  backdrop-filter: blur(10px);
+  /* Optional: Adds a glass-like blur effect */
+  z-index: 1000;
+  /* Ensures the header is above other content */
+  /* padding: 10px 20px;   Adjust padding as needed */
+  transition: background-color 0.3s ease;
+  /* Smooth transition effect for background */
+}
+
+/* Ensure nav items are visible against transparency */
+.nav__logo,
+.nav__link {
+  color: white;
+  /* White text for contrast */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Add hover effects to links */
+.nav__link:hover {
+  color: #1C83E5;
+  /* Highlight color on hover */
+}
+
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     top: var(--header-height);
     right: -100%;
-    width: 90%;
-    height: 100%;
+    width: 60%;
+    height: 100vh;
     padding: 2rem;
     background-color: hsl(var(--hue-color), 56%, 12%);
     transition: .5s;
