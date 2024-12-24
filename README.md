@@ -10,5 +10,9 @@ CHECK OUT THE PORTFOLIO BY CLICKING ON THE FOLLOWING LINK: [Portfolio link](http
 
 Here, the Preview Image of the portfolio:
 
-![preview img](/previewofportfolio.png)
+## Light Mode
+![preview img](/PreviewOfThePortfolioInlightMode.png)
+
+## Dark Mode
+![preview img](/PreviewOfThePortfolioInDarkMode.png)
 
