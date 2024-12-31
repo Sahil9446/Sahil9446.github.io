@@ -466,8 +466,7 @@ img {
 /* ===== PROJECT ===== */
 .projects__container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of project cards */
-  gap: 0px; /* Space between each project card */
+  gap: 30px; /* Space between each project card */
   justify-content: space-between; /* Distribute the space between the cards */
   flex-wrap: wrap;
   margin: 100px;
