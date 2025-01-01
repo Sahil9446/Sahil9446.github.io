@@ -504,72 +504,82 @@
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
-        <!-- ARTICLES -->
-        <section class="Blogs section" id="blogs">
-            <h2 class="section-title">Articles</h2>
-            <!-- <a href="https://medium.com/@sa_hilll94" target="_blank"><h4 style="text-align: center;">Click on it to get more articles on my medium profile.</h4></a> -->
-            <div id="blog-container">
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const blogContainer = document.getElementById('blog-container');
-                        const loadMoreButton = document.getElementById('load-more');
-                        const batchSize = 5; // Number of articles to load per batch
-                        let currentIndex = 0; // Index to keep track of loaded articles
-                        let articles = []; // Array to store all fetched articles                  
-                        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sa_hilll94')
-                            .then(response => response.json())
-                            .then(data => {
-                                articles = data.items;
-                                console.log(data.items);
-                                loadArticles();
-                            })
-                            .catch(error => console.error('Error fetching Medium articles:', error));
+ <!-- ARTICLES -->
+<section class="Blogs section" id="blogs">
+    <h2 class="section-title">Articles</h2>
+    <div id="blog-container">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const blogContainer = document.getElementById('blog-container');
+                const loadMoreButton = document.getElementById('load-more');
+                const batchSize = 5; // Number of articles to load per batch
+                let currentIndex = 0; // Index to keep track of loaded articles
+                let articles = []; // Array to store all fetched articles                  
 
-                        function loadArticles() {
-                            let html = '';
-                            const end = currentIndex + batchSize;
-                            const itemsToLoad = articles.slice(currentIndex, end);
+                fetch('https://rss.app/feeds/v1.1/FhMsYe89VgMvhXxp.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        articles = data.items;
+                        console.log(data.items);
+                        loadArticles();
+                    })
+                    .catch(error => console.error('Error fetching Medium articles:', error));
 
-                            itemsToLoad.forEach(item => {
-                                const title = item.title;
-                                const link = item.link;
-                                const pubDate = new Date(item.pubDate).toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'short',
-                                    day: 'numeric'
-                                });
-                                const description = item.description;
-                                const trimmedDescription = description.length > 200 ? description.substring(0, 200) + '...' : description;
-                                const image = item.thumbnail;
+                function loadArticles() {
+                    let html = '';
+                    const end = currentIndex + batchSize;
+                    const itemsToLoad = articles.slice(currentIndex, end);
 
-                                html += `
+                    itemsToLoad.forEach(item => {
+                        const title = item.title;
+                        const link = item.url;
+                        const pubDate = new Date(item.date_published).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric'
+                        });
+                        const description = item.content_text;
+                        const trimmedDescription = description.length > 200 ? description.substring(0, 200) + '...' : description;
+                        const image = item.image;
+
+                        html += `
                             <div class="blog-post">
-                            ${image ? `<img src="${image}" alt="${title}">` : ''}
-                            <h3>${title}</h3>
-                            <p style="text-align = justify">${trimmedDescription}</p>
-                            <a href="${link}" target="_blank">Read More</a>
-                            <p class="pub-date">Published on ${pubDate}</p>
+                                ${image ? `<img src="${image}" alt="${title}" class="blog-image">` : ''}
+                                <h3>${title}</h3>
+                                <p style="text-align: justify">${trimmedDescription}</p>
+                                <a href="${link}" target="_blank">Read More</a>
+                                <p class="pub-date">Published on ${pubDate}</p>
                             </div>
                         `;
-                            });
-
-                            blogContainer.innerHTML += html;
-                            currentIndex += batchSize;
-
-                            if (currentIndex >= articles.length) {
-                                loadMoreButton.style.display = 'none'; // Hide button when all articles are loaded
-                            }
-                        }
-
-                        loadMoreButton.addEventListener('click', loadArticles);
                     });
-                </script>
-            </div>
-            <a href="https://medium.com/@sa_hilll94" target="_blank">
-                <h3 id="blogss" style="text-align: center;">Click Here to Explore More Articles</h3>
-            </a>
-            <!-- <button id="load-more">Load More</button> -->
-        </section>
+
+                    blogContainer.innerHTML += html;
+                    currentIndex += batchSize;
+
+                    if (currentIndex >= articles.length) {
+                        loadMoreButton.style.display = 'none'; // Hide button when all articles are loaded
+                    }
+                }
+
+                loadMoreButton.addEventListener('click', loadArticles);
+            });
+        </script>
+    </div>
+    <a href="https://medium.com/@sa_hilll94" target="_blank">
+        <h3 id="blogss" style="text-align: center;">Click Here to Explore More Articles</h3>
+    </a>
+</section>
+
+<!-- CSS to ensure uniform image size -->
+<style>
+    .blog-image {
+        width: 100%;   /* You can adjust to a fixed width like 300px if preferred */
+        height: 200px; /* Fixed height to keep images consistent */
+        object-fit: cover; /* Ensures the image is properly cropped to fit the aspect ratio */
+        margin-bottom: 10px; /* Adds space below the image */
+    }
+</style>
+
 
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
