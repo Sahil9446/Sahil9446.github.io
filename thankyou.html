@@ -10,7 +10,8 @@
     <style>
         body {
             font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-            background: rgb(71, 71, 71);
+            background: url('assets/img/ThankyouBG.png') no-repeat center center fixed;
+            background-size: cover;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -21,7 +22,7 @@
 
         .thank-you-container {
             text-align: justify;
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.8); /* Adds transparency to the container */
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgb(4, 100, 224);
@@ -60,7 +61,6 @@
             background-color: #232823;
         }
 
-        /* Media query for smaller devices */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -85,7 +85,6 @@
             }
         }
 
-        /* Media query for very small devices */
         @media (max-width: 480px) {
             h1 {
                 font-size: 1.8rem;
