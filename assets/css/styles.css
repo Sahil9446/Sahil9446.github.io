@@ -178,6 +178,21 @@ img {
   /* Smooth transition effect for background */
 }
 
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #0f0;
+  animation: blink 0.8s infinite;
+}
+
+
 /* Ensure nav items are visible against transparency */
 .nav__logo,
 .nav__link {
