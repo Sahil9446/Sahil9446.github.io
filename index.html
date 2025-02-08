@@ -541,7 +541,7 @@
                         let currentIndex = 0; // Index to keep track of loaded articles
                         let articles = []; // Array to store all fetched articles                  
 
-                        fetch('https://rss.app/feeds/v1.1/ZARFIdctzPThX701.json')
+                        fetch('https://rss.app/feeds/v1.1/N98I6gCfWhSns5jM.json')
                             .then(response => response.json())
                             .then(data => {
                                 articles = data.items;
@@ -846,11 +846,51 @@
                                 </a>
                             </div>
                         </div>
-
-
-
-
                     </div>
+
+                    <div class="project__card">
+                        <div class="project__image-container">
+                            <img class="project__image" src="assets/img/devtrack.png" alt="DevTrack CLI Project Preview"
+                                loading="lazy">
+                            <div class="project__overlay">
+                                <button class="project__overlay-btn" aria-label="View DevTrack Project">
+                                    <a href="https://www.npmjs.com/package/devtrack-cli" target="_blank"
+                                        style="color: white; text-decoration: none;">View Project</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project__title">
+                            <h3>DevTrack</h3>
+                        </div>
+                        <div class="project__description">
+                            <p><b>DevTrack</b> is a simple and efficient CLI-based to-do list manager designed to
+                                streamline task management directly from the terminal. With intuitive commands, users
+                                can add, list, complete, and remove tasks seamlessly. Built using Node.js, it leverages
+                                file system storage to persist tasks without requiring a database. This project is ideal
+                                for developers who prefer a command-line workflow and need a lightweight task manager.
+                                Secure, fast, and easy to use, DevTrack enhances productivity while demonstrating best
+                                practices in CLI application development.</p>
+                        </div>
+                        <div class="project__tags">
+                            <span class="project__tag">CLI Application</span>
+                            <span class="project__tag">Node.js</span>
+                            <span class="project__tag">File System</span>
+                            <span class="project__tag">Chalk</span>
+                            <span class="project__tag">Inquirer.js</span>
+                            <span class="project__tag">Git</span>
+                            <span class="project__tag">GitHub</span>
+                            <span class="project__tag">NPM</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="https://github.com/Sahilll94/devtrack-cli" class="project__link" target="_blank">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                            <a href="https://www.npmjs.com/package/devtrack-cli" class="project__link" target="_blank">
+                                <i class='bx bxl-chrome'></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
