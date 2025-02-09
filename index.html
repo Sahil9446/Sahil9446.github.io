@@ -545,7 +545,7 @@
                             .then(response => response.json())
                             .then(data => {
                                 articles = data.items;
-                                console.log(data.items);
+                                // console.log(data.items);
                                 loadArticles();
                             })
                             .catch(error => console.error('Error fetching Medium articles:', error));
