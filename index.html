@@ -59,6 +59,25 @@
 
         gtag('config', 'G-S1G4RJZN12');
     </script>
+
+
+    <script>
+  // Detect if the environment is production (you can modify this check)
+  var isProduction = location.hostname !== "localhost" && !location.hostname.includes("127.0.0.1");
+
+  if (isProduction) {
+    console.error = function () {};
+    console.warn = function () {};
+    window.onerror = function () {
+      return true; // Suppress all errors
+    };
+    window.addEventListener("error", function (event) {
+      event.preventDefault(); // Prevents error messages from being logged
+    }, true);
+  }
+</script>
+
+    
 </head>
 
 <body>
